@@ -1,4 +1,4 @@
-CREATE TABLE coments (
+CREATE TABLE comments (
     id SERIAL PRIMARY KEY UNIQUE,
     posts_id INT,
     users_id INT,
@@ -8,8 +8,8 @@ CREATE TABLE coments (
     FOREIGN KEY (users_id)
     REFERENCES users (id)
     ON DELETE SET NULL,
-    CONSTRAINT fk_post_id
-    FOREIGN KEY (post_id)
+    CONSTRAINT fk_posts_id
+    FOREIGN KEY (posts_id)
     REFERENCES users (id)
     ON DELETE SET NULL
-)
+);
